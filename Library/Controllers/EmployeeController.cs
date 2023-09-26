@@ -164,7 +164,6 @@ namespace Library.Controllers
             return Ok(employee);
         }
 
-
         //Put api/<EmployeeController/Password
         [HttpPut("Password")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "manager")]
@@ -235,8 +234,7 @@ namespace Library.Controllers
             }
             return NotFound("Employee Not Found! Check id and try again");
         }
-
-
+        
         // DELETE api/<EmployeeController>/5
         [HttpDelete("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "manager")]

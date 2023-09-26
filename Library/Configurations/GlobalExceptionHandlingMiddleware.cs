@@ -26,7 +26,7 @@ public class GlobalExceptionHandlingMiddleware
     private static Task HandleExceptionAsync(HttpContext context, Exception ex)
     {
         HttpStatusCode statusCode;
-        string message = string.Empty;
+        string message;
 
         var exceptionType = ex.GetType();
 
