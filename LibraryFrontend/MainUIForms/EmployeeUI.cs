@@ -16,10 +16,11 @@ public partial class EmployeeUI : Form
     private IconButton? CurrentButton;
     private readonly Panel LeftBorderButton;
     private Form? CurrentChildForm;
+    
     private readonly LoginForm _LoginForm;
-
     private readonly string _Username;
 
+    //form border parameters
     private readonly int leftBorderSize = 0;
     private readonly int borderSize = 5;
     private Size formSize; //stores normal size on minimize or maximize
@@ -205,7 +206,7 @@ public partial class EmployeeUI : Form
     private extern static void ReleaseCapture();
 
     [DllImport("user32.dll", EntryPoint = "SendMessage")]
-    private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+    private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
     //overridden methods
 
